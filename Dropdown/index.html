@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="dropdown">
+        <input type="text" class="textbox" placeholder="Dropdown Menu" readonly>
+        <div class="option">
+            <div onclick="show('HTML')"> <i class="fa-brands fa-html5"></i> HTML</div>
+            <div onclick="show('CSS')"><i class="fa-brands fa-css3"></i>CSS</div>
+            <div onclick="show('Javascript')"><i class="fa-brands fa-js"></i>Javascript</div>
+            <div onclick="show('Bootstrap')"><i class="fa-brands fa-bootstrap"></i>Bootstrap</div>
+            <div onclick="show('React')"><i class="fa-brands fa-react"></i>React</div>
+        </div>
+    </div>
+    <script >
+        function show(word) {
+            document.querySelector('.textbox').value = word;
+        
+        }
+        let dropdown = document.querySelector('.dropdown');
+        dropdown.onclick = function(){
+            dropdown.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
